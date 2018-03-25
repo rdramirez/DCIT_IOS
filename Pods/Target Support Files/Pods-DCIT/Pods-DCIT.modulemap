@@ -1,0 +1,6 @@
+framework module Pods_DCIT {
+  umbrella header "Pods-DCIT-umbrella.h"
+
+  export *
+  module * { export * }
+}
