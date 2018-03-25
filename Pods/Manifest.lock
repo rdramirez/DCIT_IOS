@@ -7,16 +7,19 @@ PODS:
   - AppCenter/Core (1.5.0)
   - AppCenter/Crashes (1.5.0):
     - AppCenter/Core
+  - AppCenter/Push (1.5.0):
+    - AppCenter/Core
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - AppCenter
+  - AppCenter/Push
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   AppCenter: 42c293f0de27e173aacd600a55a49da5317cd40e
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 36c2c8e830fe23c7f29410996dbf7ee877f5b040
+PODFILE CHECKSUM: 90213ed7ff8825bf07d4557863e41fa7f4965d5c
 
 COCOAPODS: 1.2.1

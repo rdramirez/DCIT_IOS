@@ -8,5 +8,6 @@ target 'DCIT' do
   # Pods for DCIT
   	pod 'SwiftyJSON'
   	pod 'AppCenter'
+  	pod 'AppCenter/Push'
 
 end

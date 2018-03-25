@@ -10,6 +10,7 @@ import UIKit
 import AppCenter
 import AppCenterAnalytics
 import AppCenterCrashes
+import AppCenterPush
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         MSAppCenter.start("c403672e-280d-4c4d-b537-440332d44fad", withServices:[
             MSAnalytics.self,
-            MSCrashes.self
+            MSCrashes.self,
+            MSPush.self
             ])
         
         return true
