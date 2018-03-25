@@ -12,6 +12,7 @@
 		01ED8335206734700000B236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ED8333206734700000B236 /* Main.storyboard */; };
 		01ED8337206734700000B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01ED8336206734700000B236 /* Assets.xcassets */; };
 		01ED833A206734700000B236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01ED8338206734700000B236 /* LaunchScreen.storyboard */; };
+		C16409708C80918E1259092E /* Pods_DCIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD506B80A734DED556108B83 /* Pods_DCIT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		01ED8336206734700000B236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01ED8339206734700000B236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01ED833B206734700000B236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98437DCA673DF768E4FBDF7C /* Pods-DCIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCIT.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DCIT/Pods-DCIT.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0F8CE3AF9360491A5F18DD /* Pods-DCIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCIT.release.xcconfig"; path = "Pods/Target Support Files/Pods-DCIT/Pods-DCIT.release.xcconfig"; sourceTree = "<group>"; };
+		BD506B80A734DED556108B83 /* Pods_DCIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C16409708C80918E1259092E /* Pods_DCIT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				01ED832E206734700000B236 /* DCIT */,
 				01ED832D206734700000B236 /* Products */,
+				1C4817882078ED791E27B81F /* Pods */,
+				A13F7678E02595611314751B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = DCIT;
 			sourceTree = "<group>";
 		};
+		1C4817882078ED791E27B81F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98437DCA673DF768E4FBDF7C /* Pods-DCIT.debug.xcconfig */,
+				AD0F8CE3AF9360491A5F18DD /* Pods-DCIT.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A13F7678E02595611314751B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD506B80A734DED556108B83 /* Pods_DCIT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01ED833E206734700000B236 /* Build configuration list for PBXNativeTarget "DCIT" */;
 			buildPhases = (
+				D5C7881568CF52501AAACC45 /* [CP] Check Pods Manifest.lock */,
 				01ED8328206734700000B236 /* Sources */,
 				01ED8329206734700000B236 /* Frameworks */,
 				01ED832A206734700000B236 /* Resources */,
+				BDD43A9143ADB8FBF9DAEFDE /* [CP] Embed Pods Frameworks */,
+				E2A3C8D932A3481AB8DFD9C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BDD43A9143ADB8FBF9DAEFDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DCIT/Pods-DCIT-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5C7881568CF52501AAACC45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2A3C8D932A3481AB8DFD9C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DCIT/Pods-DCIT-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		01ED8328206734700000B236 /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		01ED833F206734700000B236 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98437DCA673DF768E4FBDF7C /* Pods-DCIT.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		01ED8340206734700000B236 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD0F8CE3AF9360491A5F18DD /* Pods-DCIT.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
